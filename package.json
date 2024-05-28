@@ -47,6 +47,18 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "tabWidth": 2,
+          "semi": true,
+          "singleQuote": false,
+          "trailingComma": "es5",
+          "bracketSpacing": true,
+          "arrowParens": "always",
+          "endOfLine": "auto"
+        }
+      ],
       "vue/multi-word-component-names": 0,
       "no-empty-function": "off"
     }
