@@ -10,7 +10,7 @@ import {mapActions} from "vuex";
 
 export default {
   methods: {
-    ...mapActions("state", ["incrementLikes"]),
+    ...mapActions("titleset", ["incrementLikes"]),
     likes() {
       this.incrementLikes(1);
     },

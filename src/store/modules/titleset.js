@@ -1,4 +1,4 @@
-export default {
+const title = {
   namespaced: true,
   state: {
     title: 'store',
@@ -39,3 +39,6 @@ export default {
     likes: state => state.likes
   },
 }
+
+
+export default title

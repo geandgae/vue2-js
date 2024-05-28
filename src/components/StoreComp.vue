@@ -24,7 +24,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions("state", ["updateTitle"]),
+    ...mapActions("titleset", ["updateTitle"]),
     update() {
       this.updateTitle(this.newTitle);
     },

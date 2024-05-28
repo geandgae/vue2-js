@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <Alert></Alert>
+    <Alert :alert="alertOpt"></Alert>
     <div>
       <h1>{{ title }}</h1>
       <p>{{ content }}</p>
@@ -23,20 +23,26 @@ export default {
     Alert,
     StoreComp,
   },
+  data: () => ({
+    alertOpt: {
+      show: false,
+      title: "title",
+      text: "text",
+    },
+  }),
   computed: {
     ...mapGetters("titleset", ["title", "content", "likes"]),
     ...mapGetters("alert", ["show", "dialog"]),
   },
   methods: {
-    ...mapActions("alert", ["updateShow", "updateAlert"]),
+    ...mapActions("titleset", ["updateTitle"]),
     openAlert() {
-      this.updateShow(true);
-      this.updateAlert("dialog!!");
-      // if (this.alertOpt.show === true) {
-      //   this.alertOpt.show = false;
-      // } else {
-      //   this.alertOpt.show = true;
-      // }
+      this.updateTitle("this is alert!!");
+      if (this.alertOpt.show === true) {
+        this.alertOpt.show = false;
+      } else {
+        this.alertOpt.show = true;
+      }
     },
   },
 };

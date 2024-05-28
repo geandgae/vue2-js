@@ -2,14 +2,16 @@ import Vue from "vue";
 import Vuex from "vuex";
 import auth from './modules/auth'
 import posts from './modules/posts'
-import state from './modules/state'
+import titleset from './modules/titleset'
+import alert from './modules/alert'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    state: state,
+    titleset: titleset,
     auth: auth,
-    posts: posts
+    posts: posts,
+    alert: alert
   },
 });
